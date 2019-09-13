@@ -1,6 +1,19 @@
 body {
   background: #eee;
-  max-width: 1000px;
+  width: 62rem;
+  margin: auto;
+
+  font-family: "Merriweather";
+}
+
+button {
+  width: 8.5rem;
+  height: 2.5rem;
+  border-radius: 1.5rem;
+
+  margin: 1rem;
+
+  font-weight: bold;
 }
 
 header {
@@ -11,17 +24,18 @@ header {
   grid-template-rows: 1fr 1fr;
 }
 
-.h1 {
+.bluebox {
   background: lightblue;
 
   grid-area: span 2 / 1;
 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
 }
 
-.h2 {
+.redbox {
   background: orangered;
 
   display: flex;
@@ -29,7 +43,7 @@ header {
   align-items: center;
 }
 
-.h3 {
+.orangebox {
   background: orange;
 
   display: flex;
@@ -40,21 +54,100 @@ header {
 .main-nav {
   height: 5rem;
   background: whitesmoke;
+
+  display: flex;
+  align-items: center;
 }
 
 .main-nav-list {
+  width: 100%;
+  padding: 0rem 11rem 0rem 11rem;
+
   display: flex;
   flex-direction: row;
-  align-items: space-around;
+  justify-content: space-around;
+
+  list-style: none;
+}
+
+.main-nav-list a {
+  color: grey;
+
+  text-decoration: none;
+}
+
+.main-nav-list a:hover {
+  color: black;
+}
+
+/* NEDAN: 'YOUR PERSONAL FINANCIAL'-delen */
+
+section {
+  height: 40rem;
+
+  display: flex;
+}
+
+.container-right {
+  width: 50%;
+  height: 100%;
+  background: darkgray;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-right-h1 {
+  color: whitesmoke;
+  font-size: 180%;
+  padding: 7rem;
+}
+
+.container-left {
+  width: 50%;
+  height: 100%;
+  background: darkgray;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   color: grey;
-  list-style: none;
-  text-decoration: none;
 }
 
-a {
-  text-decoration: none;
+.container-left-text {
+  font-size: 80%;
+  padding: 7rem;
 }
+
+/* NEDAN: 'ABOUT US'-delen */
+
+article {
+  height: 40rem;
+  background: orange;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutus-h1 {
+  font-size: 290%;
+  color: whitesmoke;
+  padding: 2rem;
+}
+
+.aboutus-text {
+  font-size: 100%;
+  color: gray;
+  padding: 0rem 15rem 0rem 15rem;
+  text-align: center;
+}
+
+/* NEDAN: 'HOW IT WORKS'-delen */
 
 .main-howitworks {
   display: grid;
@@ -74,7 +167,7 @@ a {
   justify-content: center;
   align-items: center;
 
-  font-size: 300%;
+  font-size: 220%;
   color: black;
 }
 
@@ -84,6 +177,9 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  padding: 2rem;
+  text-align: center;
 }
 
 .box02 {
@@ -92,6 +188,9 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  padding: 2rem;
+  text-align: center;
 }
 
 .box03 {
@@ -100,6 +199,9 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  padding: 2rem;
+  text-align: center;
 }
 
 .box04 {
@@ -108,6 +210,9 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  padding: 2rem;
+  text-align: center;
 }
 
 .box05 {
@@ -116,13 +221,17 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  padding: 2rem;
+  text-align: center;
 }
 
 footer {
   display: flex;
   justify-content: center;
+  align-items: center;
 
-  height: 20px;
+  height: 3rem;
 
   background: grey;
   color: darkgrey;
