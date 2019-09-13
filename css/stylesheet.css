@@ -1,0 +1,129 @@
+body {
+  background: #eee;
+  max-width: 1000px;
+}
+
+header {
+  height: 30rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.h1 {
+  background: lightblue;
+
+  grid-area: span 2 / 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.h2 {
+  background: orangered;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.h3 {
+  background: orange;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-nav {
+  height: 5rem;
+  background: whitesmoke;
+}
+
+.main-nav-list {
+  display: flex;
+  flex-direction: row;
+  align-items: space-around;
+
+  color: grey;
+  list-style: none;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-howitworks {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  height: 40rem;
+
+  color: grey;
+  font-size: 120%;
+}
+
+.box00 {
+  background: lightblue;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 300%;
+  color: black;
+}
+
+.box01 {
+  background: #eee;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box02 {
+  background: lightgrey;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box03 {
+  background: #eee;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box04 {
+  background: orangered;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box05 {
+  background: #eee;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+
+  height: 20px;
+
+  background: grey;
+  color: darkgrey;
+}
