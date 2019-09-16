@@ -1,5 +1,5 @@
 body {
-  background: #eee;
+  background: whitesmoke;
   width: 62rem;
   margin: auto;
 
@@ -11,13 +11,11 @@ button {
   height: 2.5rem;
   border-radius: 1.5rem;
 
-  margin: 1rem;
-
   font-weight: bold;
 }
 
 header {
-  height: 30rem;
+  height: 35rem;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -31,12 +29,30 @@ header {
 
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+}
+
+.bluebox-h1 {
+  padding: 5rem 5rem 0rem 5rem;
+  font-size: 200%;
+}
+
+.bluebox-text {
+  padding: 1rem 5rem 2rem 5rem;
+  line-height: 1.5rem;
+}
+
+.bluebox button {
+  margin-left: 5rem;
+}
+
+.bluebox img {
+  height: 15rem;
+  width: 15rem;
+  margin-left: 14rem;
 }
 
 .redbox {
-  background: orangered;
+  background: darkorange;
 
   display: flex;
   justify-content: center;
@@ -44,7 +60,7 @@ header {
 }
 
 .orangebox {
-  background: orange;
+  background: gold;
 
   display: flex;
   justify-content: center;
@@ -88,7 +104,7 @@ section {
   display: flex;
 }
 
-.container-right {
+.container-left {
   width: 50%;
   height: 100%;
   background: darkgray;
@@ -96,16 +112,19 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
-.container-right-h1 {
+.container-left-h1 {
   color: whitesmoke;
   font-size: 180%;
-  padding: 7rem;
+  margin: 5rem 5rem 3rem 7rem;
 }
 
-.container-left {
+.container-left button {
+  margin-left: 7rem;
+}
+
+.container-right {
   width: 50%;
   height: 100%;
   background: darkgray;
@@ -117,9 +136,11 @@ section {
   color: grey;
 }
 
-.container-left-text {
+.container-right-text {
+  padding: 5rem;
+
   font-size: 80%;
-  padding: 7rem;
+  line-height: 1.5rem;
 }
 
 /* NEDAN: 'ABOUT US'-delen */
@@ -141,10 +162,12 @@ article {
 }
 
 .aboutus-text {
-  font-size: 100%;
   color: gray;
   padding: 0rem 15rem 0rem 15rem;
   text-align: center;
+
+  font-size: 90%;
+  line-height: 1.5rem;
 }
 
 /* NEDAN: 'HOW IT WORKS'-delen */
@@ -205,7 +228,7 @@ article {
 }
 
 .box04 {
-  background: orangered;
+  background: darkorange;
 
   display: flex;
   justify-content: center;
