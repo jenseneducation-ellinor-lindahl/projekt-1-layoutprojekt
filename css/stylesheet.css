@@ -1,3 +1,9 @@
+/* -------BAS-STYLING------- */
+
+* {
+  box-sizing: border-box; /* Gör att alla elements eventuella padding+margins */
+} /** inkluderas i totala width och heighten man vill åt */
+
 body {
   background: whitesmoke;
   width: 62rem;
@@ -5,57 +11,94 @@ body {
 }
 
 h1 {
-  font-family: "Merriweather";
-  margin: 0;
+  font-family: "Vesper Libre", serif;
+  font-style: bold;
+  font-size: 40px;
 
-  font-size: 36px;
-  font-weight: bold;
+  line-height: 1;
+
+  margin: 0;
 }
 
 h2 {
-  font-family: "Merriweather";
-  margin: 0;
-  font-size: 26px;
+  font-family: "Vesper Libre", serif;
+  font-style: bold;
+  font-size: 34px;
+
   color: whitesmoke;
+
+  padding: 0;
+  margin: 0;
+}
+
+h4 {
+  /* Sifforna i gridboxarna längst ner*/
+  font-family: "Vesper Libre", serif;
+  font-size: 36px;
+
+  color: darkgrey;
+
+  margin: 1 0 0 1;
+}
+
+p {
+  color: dimgray;
+
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 450;
+  font-size: 14px;
+
+  line-height: 1.5rem;
+
+  padding: 0;
+  margin: 0;
 }
 
 button {
   width: 130px;
   border-radius: 17px;
+
+  box-shadow: 1.3px 1.3px grey;
+
   padding: 10px;
 
-  box-shadow: 2px 2px grey;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
 
-  font-weight: bold;
+  margin-top: 40px;
 }
 
-p {
-  color: gray;
-
-  font-family: "Merriweather";
-  font-size: 14px;
-
-  line-height: 1.5rem;
+button:hover {
+  background: gainsboro;
 }
 
-/* HÄR BÖRJAR LAYOUTEN */
+a {
+  color: grey;
+  text-decoration: none;
+}
+
+/* ------HÄR BÖRJAR LAYOUTEN FÖR HEADERN------- */
 
 header {
-  height: 35rem;
+  height: 550px;
 
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; /* fyra grids totalt */
   grid-template-rows: 1fr 1fr;
 }
 
 .bluebox {
-  grid-area: span 2 / 1;
   background: lightblue;
-  background-image: url(images/family.png);
-  background-size: 25%;
-  background-position: right;
 
-  padding: 20% 0% 0% 20%;
+  grid-area: span 2 / 1;
+
+  background-image: url(../images/family.png);
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: right bottom;
+
+  padding: 20% 25% 0% 20%;
 
   display: flex;
   flex-direction: column;
@@ -79,147 +122,227 @@ header {
   align-items: center;
 }
 
-/* NEDAN ÄR NAV-BOXEN */
+/* ------STYLING FÖR NAV-BOXEN------ */
 
 nav {
-  font-family: "Merriweather";
-
-  height: 5rem;
   background: whitesmoke;
+  height: 5rem;
+
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 450;
+  font-size: 14px;
 
   display: flex;
   align-items: center;
 }
 
-.main-nav-list {
+.nav-list {
   width: 100%;
   padding: 0rem 11rem 0rem 11rem;
+
+  list-style: none;
 
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-
-  list-style: none;
 }
 
-.main-nav-list a {
-  color: grey;
-
-  text-decoration: none;
-}
-
-.main-nav-list a:hover {
+.nav-list a:hover {
   color: black;
 }
 
-/* NEDAN: 'YOUR PERSONAL FINANCIAL'-delen */
+/* -----STYLING FÖR 'YOUR PERSONAL FINANCIAL'-delen----- */
 
 section {
-  height: 40rem;
+  background: darkgray;
+  height: 35rem;
 
-  display: flex;
+  display: flex; /* så de två containrarna i 'section' hamnar i row */
+}
+
+section h1 {
+  color: whitesmoke;
 }
 
 .container-left {
   width: 50%;
-  height: 100%;
-  background: darkgray;
+
+  padding: 10% 5% 0% 10%;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-
-.container-left h1 {
-  color: whitesmoke;
-  margin: 5rem 5rem 3rem 7rem;
-}
-
-.container-left button {
-  margin-left: 7rem;
 }
 
 .container-right {
   width: 50%;
-  height: 100%;
-  background: darkgray;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  color: grey;
+  padding: 10% 15% 0% 5%;
 }
 
-.container-right p {
-  padding: 5rem;
-
-  font-size: 80%;
-  line-height: 1.5rem;
-}
-
-/* NEDAN: 'ABOUT US'-delen */
+/* ------STYLING FÖR 'ABOUT US'-delen------ */
 
 article {
-  height: 40rem;
   background: orange;
+  height: 40rem;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.container {
-  background: #eee;
-
-  width: 75%;
-
-  position: relative;
-  top: -20px;
-  z-index: 1;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.box1 {
-  margin: 10%;
-}
-
-.box2 {
-  margin: 10%;
-}
-
-.box3 {
-  margin: 10%;
+  text-align: center;
 }
 
 article h1 {
   color: whitesmoke;
-  padding: 2rem;
+  margin: -5%;
 }
 
-article p {
-  color: gray;
-  padding: 0rem 15rem 0rem 15rem;
+.textbox {
+  padding: 7% 25% 0% 25%;
+}
+
+.textbox p {
+  margin: 1%;
+}
+
+/* -----DE TRE BOXARNA PÅ MITTEN----- */
+
+.tripplebox {
+  /* OBS: barn till 'article' */
+  width: 75%;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0.5rem;
+
   text-align: center;
 
-  line-height: 1.5rem;
+  position: relative; /* flyttas upp ur 'article' */
+  top: -125px;
+  z-index: 1; /* ett lager över allt annat, 3D */
 }
 
-/* NEDAN: 'HOW IT WORKS'-delen */
+.tripplebox img {
+  height: 250px;
+}
 
-.main-howitworks {
+.tripplebox p {
+  max-width: 100%;
+  font-size: 8px;
+
+  line-height: 18px;
+
+  padding: 0% 7% 10% 7%;
+  margin: 0;
+}
+
+.box1 {
+  background: #eee;
+  width: 200px;
+  height: 250px;
+  border-radius: 5px;
+
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: auto;
+}
+
+.imgbox1 {
+  background: lightblue;
+  width: 90%;
+
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  position: relative;
+  top: -15px;
+  z-index: 3;
+
+  margin: auto;
+
+  overflow: hidden;
+}
+
+.box2 {
+  background: #eee;
+  width: 200px;
+  height: 250px;
+  border-radius: 5px;
+
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: auto;
+}
+
+.imgbox2 {
+  background: orange;
+  width: 90%;
+
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  position: relative;
+  top: -15px;
+  z-index: 3;
+
+  margin: auto;
+
+  overflow: hidden;
+}
+
+.box3 {
+  background: #eee;
+  width: 200px;
+  height: 250px;
+  border-radius: 5px;
+
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: auto;
+}
+
+.imgbox3 {
+  background: darkorange;
+  width: 90%;
+
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  position: relative;
+  top: -15px;
+  z-index: 3;
+
+  margin: auto;
+
+  overflow: hidden;
+}
+
+/* ------'HOW IT WORKS'/GRIDBOX-delen------ */
+
+main {
+  height: 40rem;
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-
-  height: 40rem;
-
-  color: grey;
-  font-family: "Merriweather";
 }
 
 .box00 {
@@ -230,19 +353,12 @@ article p {
   align-items: center;
 }
 
-.box00 h1 {
-  color: black;
-}
-
 .box01 {
   background: #eee;
 
   display: flex;
   justify-content: center;
   align-items: center;
-
-  padding: 2rem;
-  text-align: center;
 }
 
 .box02 {
@@ -251,9 +367,6 @@ article p {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  padding: 2rem;
-  text-align: center;
 }
 
 .box03 {
@@ -262,9 +375,6 @@ article p {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  padding: 2rem;
-  text-align: center;
 }
 
 .box04 {
@@ -273,9 +383,6 @@ article p {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  padding: 2rem;
-  text-align: center;
 }
 
 .box05 {
@@ -284,18 +391,62 @@ article p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
-  padding: 2rem;
+main h4 {
+  /* siffrorna i rutorna */
+  align-self: flex-start;
+  justify-self: flex-start;
+
+  margin: 5px 0 0 20px;
+  padding: 0;
+}
+
+main p {
+  /* brödtexten i rutorna */
+  margin: auto;
+  padding: 0 25% 0 0;
+
   text-align: center;
 }
 
+/* -------STYLING FÖR FOOTER------- */
+
 footer {
+  background: darkgrey;
+  height: 70px;
+
+  color: dimgrey; /* för pilens färg, texten är redan p */
+
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: auto;
+}
 
-  height: 4rem;
+@keyframes bounce {
+  0%,
+  20%,
+  60%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
 
-  background: grey;
-  color: darkgrey;
+  40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  80% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+footer:hover {
+  background: gainsboro;
+
+  animation: bounce 1s;
 }
