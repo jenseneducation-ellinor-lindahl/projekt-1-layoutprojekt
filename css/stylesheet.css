@@ -2,17 +2,43 @@ body {
   background: whitesmoke;
   width: 62rem;
   margin: auto;
+}
 
+h1 {
   font-family: "Merriweather";
+  margin: 0;
+
+  font-size: 36px;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: "Merriweather";
+  margin: 0;
+  font-size: 26px;
+  color: whitesmoke;
 }
 
 button {
-  width: 8.5rem;
-  height: 2.5rem;
-  border-radius: 1.5rem;
+  width: 130px;
+  border-radius: 17px;
+  padding: 10px;
+
+  box-shadow: 2px 2px grey;
 
   font-weight: bold;
 }
+
+p {
+  color: gray;
+
+  font-family: "Merriweather";
+  font-size: 14px;
+
+  line-height: 1.5rem;
+}
+
+/* HÄR BÖRJAR LAYOUTEN */
 
 header {
   height: 35rem;
@@ -23,51 +49,41 @@ header {
 }
 
 .bluebox {
-  background: lightblue;
-
   grid-area: span 2 / 1;
+  background: lightblue;
+  background-image: url(images/family.png);
+  background-size: 25%;
+  background-position: right;
+
+  padding: 20% 0% 0% 20%;
 
   display: flex;
   flex-direction: column;
 }
 
-.bluebox-h1 {
-  padding: 5rem 5rem 0rem 5rem;
-  font-size: 200%;
-}
-
-.bluebox-text {
-  padding: 1rem 5rem 2rem 5rem;
-  line-height: 1.5rem;
-}
-
-.bluebox button {
-  margin-left: 5rem;
-}
-
-.bluebox img {
-  height: 15rem;
-  width: 15rem;
-  margin-left: 14rem;
-}
-
-.redbox {
+.orangebox {
   background: darkorange;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.orangebox {
+.yellowbox {
   background: gold;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.main-nav {
+/* NEDAN ÄR NAV-BOXEN */
+
+nav {
+  font-family: "Merriweather";
+
   height: 5rem;
   background: whitesmoke;
 
@@ -114,9 +130,8 @@ section {
   justify-content: center;
 }
 
-.container-left-h1 {
+.container-left h1 {
   color: whitesmoke;
-  font-size: 180%;
   margin: 5rem 5rem 3rem 7rem;
 }
 
@@ -136,7 +151,7 @@ section {
   color: grey;
 }
 
-.container-right-text {
+.container-right p {
   padding: 5rem;
 
   font-size: 80%;
@@ -155,18 +170,42 @@ article {
   align-items: center;
 }
 
-.aboutus-h1 {
-  font-size: 290%;
+.container {
+  background: #eee;
+
+  width: 75%;
+
+  position: relative;
+  top: -20px;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.box1 {
+  margin: 10%;
+}
+
+.box2 {
+  margin: 10%;
+}
+
+.box3 {
+  margin: 10%;
+}
+
+article h1 {
   color: whitesmoke;
   padding: 2rem;
 }
 
-.aboutus-text {
+article p {
   color: gray;
   padding: 0rem 15rem 0rem 15rem;
   text-align: center;
 
-  font-size: 90%;
   line-height: 1.5rem;
 }
 
@@ -180,7 +219,7 @@ article {
   height: 40rem;
 
   color: grey;
-  font-size: 120%;
+  font-family: "Merriweather";
 }
 
 .box00 {
@@ -189,8 +228,9 @@ article {
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
-  font-size: 220%;
+.box00 h1 {
   color: black;
 }
 
@@ -254,7 +294,7 @@ footer {
   justify-content: center;
   align-items: center;
 
-  height: 3rem;
+  height: 4rem;
 
   background: grey;
   color: darkgrey;
